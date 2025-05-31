@@ -1,20 +1,41 @@
 [
   {
-    "name": "Camara_Entrada",
-    "rtsp_url_template": "rtsp://{{USER_CAM_ENTRADA}}:{{PASSWORD_CAM_ENTRADA}}@{{IP_CAM_ENTRADA}}:554/stream1",
-    "output_folder": "entrada",
-    "segment_time": 3600
+    "name": "Camara_testing",
+    "rtsp_url_template": "rtsp://{{USER_CAM_1}}:{{PASSWORD_CAM_1}}@{{IP_CAM_1}}:554/channel1",
+    "output_folder": "testing",
+    "segment_time": 600,
+    "video_codec": "libx264",
+    "preset": "veryfast",
+    "crf": 23,
+    "scale_res": "800:450",
+    "output_format": "mkv",
+    "filename_pattern": "ezviz-H1c_%Y-%m-%d_%H-%M-%S.mkv",
+    "audio_enabled": false
   },
   {
-    "name": "Camara_Jardin",
-    "rtsp_url_template": "rtsp://{{USER_CAM_JARDIN}}:{{PASSWORD_CAM_JARDIN}}@{{IP_CAM_JARDIN}}:554/stream2",
-    "output_folder": "jardin",
-    "segment_time": 1800
+    "name": "Camara_Principal_1",
+    "rtsp_url_template": "rtsp://{{USER_CAM_2}}:{{PASSWORD_CAM_2}}@{{IP_CAM_2}}:554/channel1",
+    "output_folder": "principal_1",
+    "segment_time": 600,
+    "video_codec": "libx264",
+    "preset": "veryfast",
+    "crf": 23,
+    "scale_res": "800:450",
+    "output_format": "mkv",
+    "filename_pattern": "ezviz-H3c_%Y-%m-%d_%H-%M-%S.mkv",
+    "audio_enabled": false
   },
   {
-    "name": "Camara_Salon",
-    "rtsp_url_template": "rtsp://{{USER_CAM_SALON}}:{{PASSWORD_CAM_SALON}}@{{IP_CAM_SALON}}:554/stream3",
-    "output_folder": "salon",
-    "segment_time": 7200
+    "name": "Camara_Principal_2",
+    "rtsp_url_template": "rtsp://{{USER_CAM_3}}:{{PASSWORD_CAM_3}}@{{IP_CAM_3}}:554/channel1",
+    "output_folder": "principal_2",
+    "segment_time": 600,
+    "video_codec": "libx264",
+    "preset": "veryfast",
+    "crf": 23,
+    "scale_res": "800:450",
+    "output_format": "mkv",
+    "filename_pattern": "ezviz-H3c_%Y-%m-%d_%H-%M-%S.mkv",
+    "audio_enabled": false
   }
 ]
