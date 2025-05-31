@@ -1,41 +1,41 @@
-[
-  {
-    "name": "Camara_testing",
-    "rtsp_url_template": "rtsp://{{USER_CAM_1}}:{{PASSWORD_CAM_1}}@{{IP_CAM_1}}:554/channel1",
-    "output_folder": "testing",
+{
+  "_defaults": {
     "segment_time": 600,
     "video_codec": "libx264",
     "preset": "veryfast",
     "crf": 23,
     "scale_res": "800:450",
     "output_format": "mkv",
-    "filename_pattern": "ezviz-H1c_%Y-%m-%d_%H-%M-%S.mkv",
     "audio_enabled": false
   },
-  {
-    "name": "Camara_Principal_1",
-    "rtsp_url_template": "rtsp://{{USER_CAM_2}}:{{PASSWORD_CAM_2}}@{{IP_CAM_2}}:554/channel1",
-    "output_folder": "principal_1",
-    "segment_time": 600,
-    "video_codec": "libx264",
-    "preset": "veryfast",
-    "crf": 23,
-    "scale_res": "800:450",
-    "output_format": "mkv",
-    "filename_pattern": "ezviz-H3c_%Y-%m-%d_%H-%M-%S.mkv",
-    "audio_enabled": false
-  },
-  {
-    "name": "Camara_Principal_2",
-    "rtsp_url_template": "rtsp://{{USER_CAM_3}}:{{PASSWORD_CAM_3}}@{{IP_CAM_3}}:554/channel1",
-    "output_folder": "principal_2",
-    "segment_time": 600,
-    "video_codec": "libx264",
-    "preset": "veryfast",
-    "crf": 23,
-    "scale_res": "800:450",
-    "output_format": "mkv",
-    "filename_pattern": "ezviz-H3c_%Y-%m-%d_%H-%M-%S.mkv",
-    "audio_enabled": false
-  }
-]
+  "cameras": [
+    {
+      "name": "Camara_testing",
+      "rtsp_url_template": "rtsp://{{USER_CAM_1}}:{{PASSWORD_CAM_1}}@{{IP_CAM_1}}:554/channel1",
+      "output_folder": "testing",
+      "filename_pattern": "ezviz-H1c_%Y-%m-%d_%H-%M-%S.mkv"
+    },
+    {
+      "name": "Camara_Principal_1",
+      "rtsp_url_template": "rtsp://{{USER_CAM_2}}:{{PASSWORD_CAM_2}}@{{IP_CAM_2}}:554/channel1",
+      "output_folder": "principal_1",
+      "filename_pattern": "ezviz-H2c_%Y-%m-%d_%H-%M-%S.mkv"
+    },
+    {
+      "name": "Camara_Principal_2",
+      "rtsp_url_template": "rtsp://{{USER_CAM_3}}:{{PASSWORD_CAM_3}}@{{IP_CAM_3}}:554/channel1",
+      "output_folder": "principal_2",
+      "filename_pattern": "ezviz-H3c_%Y-%m-%d_%H-%M-%S.mkv"
+    },
+    {
+      "name": "Camara_especial",
+      "rtsp_url_template": "rtsp://{{USER_CAM_4}}:{{PASSWORD_CAM_4}}@{{IP_CAM_4}}:554/channel2",
+      "output_folder": "especial",
+      "segment_time": 1200,    
+      "video_codec": "hevc",   
+      "crf": 28,               
+      "audio_enabled": true,   
+      "filename_pattern": "especial_%Y-%m-%d_%H-%M-%S.mkv"
+    }
+  ]
+}
